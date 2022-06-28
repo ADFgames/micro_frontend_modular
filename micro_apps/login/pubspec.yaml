@@ -1,4 +1,4 @@
-name: micro_core
+name: login
 description: A new Flutter package project.
 version: 0.0.1
 homepage:
@@ -11,12 +11,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
-  dependencies:
-    path: ../micro_commons/dependencies
 
-  login:
-    path: ../micro_apps/login
+  micro_core:
+    path: ../../micro_core
+
+  dependencies:
+    path: ../../micro_commons/dependencies
 
 dev_dependencies:
   flutter_test:

@@ -1,7 +1,10 @@
 library dependencies;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'package:equatable/equatable.dart';
+export 'package:flutter_modular/flutter_modular.dart';
+export 'package:dio/dio.dart';
+export 'package:dio/native_imp.dart';
+export 'package:flutter_mobx/flutter_mobx.dart';
+export 'package:flutter_modular_annotations/flutter_modular_annotations.dart';
+
+// export 'package:dartz/dartz.dart';
