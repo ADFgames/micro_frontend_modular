@@ -18,6 +18,9 @@ dependencies:
   dependencies:
     path: ../../micro_commons/dependencies
 
+  commons:
+    path: ../../micro_commons/commons
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
