@@ -2,10 +2,10 @@
 import 'dart:convert';
 
 class LoginParams {
-  final String email;
-  final String password;
+  String email;
+  String password;
 
-  LoginParams(this.email, this.password);
+  LoginParams({required this.email, required this.password});
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
@@ -16,8 +16,8 @@ class LoginParams {
 
   factory LoginParams.fromMap(Map<String, dynamic> map) {
     return LoginParams(
-      map['email'] as String,
-      map['password'] as String,
+      email: map['email'] as String,
+      password: map['password'] as String,
     );
   }
 

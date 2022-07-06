@@ -1,5 +1,5 @@
 import 'package:commons/commons.dart';
-import 'package:dependencies/dependencies.dart';
+import 'package:dartz/dartz.dart';
 import 'package:login/app/module/domain/entities/login_entity.dart';
 import 'package:login/app/module/domain/errors/errors.dart';
 import 'package:login/app/module/domain/repositories/login_repository.dart';

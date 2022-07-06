@@ -43,6 +43,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.15.0"
+  commons:
+    dependency: transitive
+    description:
+      path: "../micro_commons/commons"
+      relative: true
+    source: path
+    version: "0.0.1"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -61,6 +68,13 @@ packages:
     dependency: "direct main"
     description:
       path: "../micro_commons/dependencies"
+      relative: true
+    source: path
+    version: "0.0.1"
+  design_system:
+    dependency: transitive
+    description:
+      path: "../micro_commons/design_system"
       relative: true
     source: path
     version: "0.0.1"
