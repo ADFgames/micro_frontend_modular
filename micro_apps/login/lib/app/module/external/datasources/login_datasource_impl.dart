@@ -5,15 +5,15 @@ import 'package:login/app/module/infra/models/login_model.dart';
 import 'package:login/app/module/infra/models/login_params.dart';
 
 class LoginDatasourceImpl implements LoginDatasource {
-  RestClient restClient;
+  RestClient? restClient;
 
   LoginDatasourceImpl({
-    required this.restClient,
+    this.restClient,
   });
 
   @override
   Future<LoginModel> auth(LoginParams loginParams) async {
-    RestClientResponse restClientResponse = await restClient.post('/login', data: loginParams.toJson());
+    RestClientResponse restClientResponse = await restClient!.post('/login', data: loginParams.toJson());
 
     Map<String, dynamic> respData = restClientResponse.data;
 

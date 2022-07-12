@@ -15,8 +15,14 @@ dependencies:
   dependencies:
     path: ../micro_commons/dependencies
 
+  commons:
+    path: ../micro_commons/commons
+
   login:
     path: ../micro_apps/login
+
+  home:
+    path: ../micro_apps/home
 
 dev_dependencies:
   flutter_test:

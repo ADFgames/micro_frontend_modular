@@ -1,3 +1,4 @@
+import 'package:commons/shared/rest_client/rest_client.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:login/app/module/domain/repositories/login_repository.dart';
 import 'package:login/app/module/domain/usecases/usecases.dart';
@@ -9,15 +10,15 @@ import 'package:login/app/module/presenter/login_page.dart';
 
 class LoginModule extends Module {
   @override
-  final List<Bind> binds = [
-    Bind.lazySingleton<LoginUsecase>((i) => LoginUsecaseImpl(repository: i.get())),
-    Bind.lazySingleton<LoginRepository>((i) => LoginRepositoryImpl(datasource: i.get())),
-    Bind.lazySingleton<LoginDatasource>((i) => LoginDatasourceImpl(restClient: i.get())),
-    Bind.lazySingleton<LoginPageController>((i) => LoginPageController(usecaseImpl: i.get())),
-  ];
+  List<Bind> get binds => [
+        Bind.singleton<LoginPageController>((i) => LoginPageController(usecaseImpl: i.get<LoginUsecaseImpl>())),
+        Bind.lazySingleton<LoginUsecase>((i) => LoginUsecaseImpl(repository: i.get<LoginRepositoryImpl>())),
+        Bind.lazySingleton<LoginRepository>((i) => LoginRepositoryImpl(datasource: i.get<LoginDatasourceImpl>())),
+        Bind.lazySingleton<LoginDatasource>((i) => LoginDatasourceImpl(restClient: i.get<RestClient>())),
+      ];
 
   @override
-  final List<ModularRoute> routes = [
-    ChildRoute('/', child: (_, __) => const LoginPage()),
-  ];
+  List<ModularRoute> get routes => [
+        ChildRoute('/', child: (_, __) => const LoginPage()),
+      ];
 }

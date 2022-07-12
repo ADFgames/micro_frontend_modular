@@ -1,3 +1,4 @@
+import 'package:dependencies/dependencies.dart';
 import 'package:login/app/module/domain/usecases/usecases.dart';
 import 'package:login/app/module/infra/models/models.dart';
 import 'package:mobx/mobx.dart';
@@ -44,7 +45,7 @@ abstract class LoginPageControllerBase with Store {
       errorLoginModel.message = loginFailure.message;
       setLoginInfoState(errorLoginModel);
     }, (loginModel) {
-      print('===================== Deu certo !!!!!! ============================');
+      Modular.to.pushReplacementNamed('/home', arguments: loginModel);
     });
   }
 }

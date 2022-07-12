@@ -2,6 +2,8 @@ name: home
 description: A new Flutter package project.
 version: 0.0.1
 homepage:
+publish_to: none
+
 
 environment:
   sdk: ">=2.16.2 <3.0.0"
@@ -10,6 +12,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  dependencies:
+    path: ../../micro_commons/dependencies
+
+  login:
+    path: ../../micro_apps/login
 
 dev_dependencies:
   flutter_test:
