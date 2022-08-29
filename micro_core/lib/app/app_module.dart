@@ -8,10 +8,12 @@ class AppModule extends Module {
   @override
   List<Bind> get binds => [
         Bind.factory<RestClient>((i) => DioRestClient()),
-        Bind.lazySingleton((i) => BaseOptions(
-              baseUrl: apiDevBaseUrl,
-              connectTimeout: 5000,
-            )),
+        Bind.lazySingleton(
+          (i) => BaseOptions(
+            baseUrl: apiDevBaseUrl,
+            connectTimeout: 5000,
+          ),
+        ),
       ];
 
   @override
